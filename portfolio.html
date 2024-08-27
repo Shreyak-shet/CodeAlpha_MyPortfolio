@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreya's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <img src="portfolio_pic/2.png" />
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="">RESUME</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+  </header>
+  <main>
+    <div class="leftside">
+      <div>Hello My Name Is  <span id="element1">Shreya</span> </div>
+      <div>I Am a <span id="element2"></span></div>
+      <details>
+        <summary>
+          About Me
+        </summary>
+        <p>Eager to leverage theoretical knowledge in practical projects and
+          professional environments. Committed to continuous learning and career
+          development, with a strong drive to achieve excellence through
+          determination, innovation, and collaboration. Possess excellent time
+          management abilities, basic knowledge of AWS, and practical experience
+          with SQL, along with foundational skills in React and a passion for
+          building a successful career in software development.</p>
+      </details>
+
+    </div>
+    <div class="rightside">
+        <img src="portfolio_pic/shreyfare.jpg">
+  
+
+    </div>
+    
+  <section id="project">
+  </main>
+  
+
+  <hr>
+
+  <div class="title">
+    <h2><span class="underline">PROJECT</span></h2>
+  </div>
+  <div class="contain">
+    <div class="pro1">
+      <img src="portfolio_pic/dbms.png">
+      <div class="hidecon">
+        <h3>GRAPHICS AND ADZ MANAGEMENT</h3>
+        <p><span>TOOL USED:MYSQL SERVER</span></p>
+        <P>The project builds a database system for storing graphics and ads and
+          related entities such as employees, clients, branches, and computers
+          using MySQL. Automated pricing calculations for orders and effective
+          data retrieval for faster operations are two important characteristics.
+          </P>
+      </div>
+    </div>
+  
+      <div class="pro1">
+        <img src="portfolio_pic/web.png">
+        <div class="hidecon">
+          <h3>THE BREED HEAVEN HUB</h3>
+          <p><span>LANGUAGE USED:HTML, CSS, JavaScript, PHP</span></p>
+
+          <P>XAMPP is used to create a pet adoption website, utilizing HTML, CSS,
+            JavaScript, and PHP. The website features a shopping page, adoption
+            page, about page, and login page. A MySQL database is used to
+            securely store data, ensuring effective management and retrieval of
+            user and adoption information. This user-friendly web setting
+            encourages pet adoptions and promotes pet-related goods</P>
+        </div>
+      </div>
+    </div>
+<hr>
+</section>
+
+<section id="skills">
+<div class="title">
+  <h2><span class="underline">SKILLS</span></h2>
+</div>
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+      <div class="content">
+        <h2>Techinical Languague</h2>
+        <div class="image">
+          <img src="portfolio_pic/clogo.png" />
+          <img src="portfolio_pic/java_logo.png" />
+          <img src="portfolio_pic/jslogo1.png"  />
+          <img src="portfolio_pic/python_logo.png"  />
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="content">
+        <h2>Web Skill</h2>
+        <div class="image">
+          <img src="portfolio_pic/html_logo.png" />
+          <img src="portfolio_pic/css_logo.webp" />
+          <img src="portfolio_pic/php.jpg" />
+        </div>
+        </div>
+    </div>
+    <div class="slide">
+      <div class="content">
+        <h2>DataBase</h2>
+        <div class="image">
+          <img src="portfolio_pic/sqllogo.png" />
+          <img src="portfolio_pic/xamp_logo.png" />
+        </div>
+        </div>
+    </div>
+  </div>
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+</section>
+
+
+<section id="contact">
+<div class="social-links">
+  <h2>Connect with Me</h2>
+  <div class="social-icons">
+      <a href="https://www.linkedin.com/in/shreyak-shet2911/" target="_blank">
+          <img src="portfolio_pic/linkdin_logo.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/Shreyak-shet" target="_blank">
+          <img src="portfolio_pic/gitlogo.png" alt="GitHub">
+      </a>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Shreya K Shet. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+  
+  <script> 
+   var typed = new Typed('#element1', {
+    strings: ["Shreya k Shet"],
+    typeSpeed:100,
+    showCursor:true,
+    loop:true,
+    loopCount:Infinity,
+    fadeOut:true,
+    fadeOutClass:"typed-wait",
+    fadeOutDelay:2500,
+    cursorChar:" ",
+    autoInsertCss:true,
+ });
+  var typed = new Typed('#element2', {
+    strings: ["Web Developer","Software Engineer"],
+    typeSpeed:70,
+    showCursor:true,
+    loop:true,
+    loopCount:Infinity,
+    cursorChar:" ",
+    autoInsertCss:true,
+  });
+  </script>
+
+  <script>
+  let currentSlide=0;
+  function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+
+    currentSlide += direction;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+</script>
+
+    
+
+
+  </body>
+</html>
